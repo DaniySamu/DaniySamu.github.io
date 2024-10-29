@@ -1,5 +1,17 @@
-#filamento{
-    width: 600px;
-    height: 250px;
+body{
+    background-color: rgb(252, 227, 195);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+figure{
     text-align: center;
+}
+#filamento{
+    height: 35%;
+    width: 35%;
+    border-radius: 2%;
+}
+#resina{
+    height: 25%;
+    width: 25%;
+    border-radius: 2%;
 }
