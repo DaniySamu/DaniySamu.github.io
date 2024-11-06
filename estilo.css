@@ -33,3 +33,7 @@ figure{
     width: 25%;
     border-radius: 2%;
 }
+a{
+    text-decoration: none;
+    color: black;
+}
