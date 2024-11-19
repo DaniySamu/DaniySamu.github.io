@@ -1,29 +1,75 @@
 *{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
 }
-h1{
+body{
+    width: 80%;
+    margin: auto;
+    border: 1px solid rgb(253, 164, 63);
+    padding: 3px;
+}
+header{
+    width: 100%;
+}
+main{
+    width: 80%;
+    margin: auto;
+}
+footer{
+    width: 80%;
+    margin: auto;
+    height: 30px;
+    text-align: center;
+    color: rgb(253, 164, 63);
+}
+h1:first-child{
     margin: 0;
     text-align: center;
     padding: 10px;
+    background-color: rgb(248, 198, 142);
+    border: 1px solid rgb(253, 164, 63);
+    color: white;
 }
 ol{
-    padding:10px 0;
+    padding:0 0;
+    border: 1px solid rgb(253, 164, 63);
 }
 li{
     display: inline-block;
     width: 25%;
     text-align: center;
-    font-weight: bold;
+    font-weight: bold; 
+    box-sizing: border-box;
+    color: rgb(253, 164, 63);
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+li:hover{
+    background-color: rgb(253, 164, 63);
+    color: white;
 }
 h2{
     padding-bottom: 8px;
     padding-top: 8px;
     margin: 0;
+    border-bottom: 1px solid rgb(253, 164, 63);
 }
 figure{
     text-align: center;
 }
+a:first-child{
+    text-decoration: none;
+    color: rgb(253, 164, 63);
+}
 a{
     text-decoration: none;
     color: black;
+}
+a:hover{
+    background-color: rgb(253, 164, 63);
+    color: white;
+}
+li:hover{
+    background-color: rgb(253, 164, 63);
+    color: white;
 }
