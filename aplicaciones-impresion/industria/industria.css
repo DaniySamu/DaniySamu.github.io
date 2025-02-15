@@ -1,0 +1,136 @@
+body {
+    font-family: 'Noto Sans Mono';
+    font-size: small;
+    background-color: #FFF3E0;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header>nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FF8C42;
+    padding: 10px 20px;
+  }
+  
+  header>nav>div:first-of-type {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  header>nav>ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header>nav>ul>a>li {
+    margin-left: 20px;
+    text-align: center;
+  }
+  
+  header>nav>ul>a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  header>nav>ul>li>a:hover {
+    color: #FFF3E0;
+  }
+  
+  header>nav>input[type="checkbox"] {
+    display: none;
+  }
+  
+  header>nav>label {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  header>nav>label>span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: 0.4s;
+  }
+  
+  @media (max-width: 1090px) {
+    header>nav>ul {
+      display: none;
+      flex-direction: column;
+      width: 320px;
+      background-color:#FF8C42;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      margin: 0;
+      padding: 10px;
+      box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.2);
+    }
+  
+    header>nav>ul>li {
+      margin: 10px 0;
+      text-align: center; 
+    }
+  
+    header>nav>label {
+      display: flex;
+    }
+  
+    header>nav>input[type="checkbox"]:checked ~ ul {
+      display: flex;
+    }
+    }
+    footer{
+      position: relative;
+      bottom: 0;
+      width: 80%;
+      margin: auto;
+      height: 30px;
+      text-align: center;
+      color: rgb(255, 153, 37);
+    }
+    footer>a{
+      color: rgb(255, 153, 37);
+    }
+    footer>a:hover{
+      color: rgb(255, 177, 87);
+    }
+    section {
+        margin: 20px;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+    }
+    a:hover{
+        color: #e4e4e4;
+    }
+    p{
+        text-align: justify;
+    }
+    div:nth-of-type(1)>p{
+        margin-left: 20px;
+    }
+    div:nth-of-type(1)>p>a{
+        color: black;
+    }
+    div:nth-of-type(1)>p>a:hover{
+        color: black;
+    }
+    main>div:nth-of-type(1)>p{
+        text-align: center;
+        width: 96%;
+        margin-left: 20px;
+    }
+    section>ul>li{
+        font-weight: bold;
+    }
