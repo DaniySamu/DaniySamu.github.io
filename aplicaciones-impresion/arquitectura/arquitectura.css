@@ -6,7 +6,11 @@ body {
     margin: 0;
     padding: 0;
   }
-  
+  header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
   header>nav {
     display: flex;
     justify-content: space-between;
@@ -60,6 +64,9 @@ body {
     background-color: white;
     margin: 4px 0;
     transition: 0.4s;
+  }
+  main>div{
+    margin-top: 70px;
   }
   
   @media (max-width: 1090px) {
