@@ -141,3 +141,6 @@ body {
     section>ul>li{
         font-weight: bold;
     }
+    section>ul>li>ul{
+      font-weight: normal;
+    }
