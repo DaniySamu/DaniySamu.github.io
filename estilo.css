@@ -161,6 +161,8 @@ main>div{
   }
   nav>div>div>img{
     position: absolute;
-    top: 18px;
+    top: 17px;
     left: 216px;
+    height: 32px;
+    width: 32px;
   } 
