@@ -124,7 +124,7 @@ main>div{
       color: #FFA000;
   }
   p{
-      text-align: justify;
+      text-align: left;
   }
   div:nth-of-type(1)>p{
       margin-left: 20px;
