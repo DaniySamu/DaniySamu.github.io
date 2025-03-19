@@ -71,7 +71,7 @@ main>div{
   margin-top: 80px;
 }
 
-@media (max-width: 1250px) {
+@media (max-width: 760px) {
   header>nav>ul {
     display: none;
     flex-direction: column;
