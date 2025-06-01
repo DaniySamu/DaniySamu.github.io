@@ -9,26 +9,63 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap" rel="stylesheet">
+    <script>
+        window.onload = function () {
+        const boton = document.getElementById("boton");
+        const navegacion = document.querySelector("header nav ol");
+        function ajustarNavegacion() {
+          if (window.innerWidth > 920) {
+            navegacion.style.display = "flex";
+            navegacion.style.flexDirection = "row";
+            navegacion.style.justifyContent = "right";
+            navegacion.style.position = "static";
+            navegacion.style.width = "60%";
+            navegacion.style.backgroundColor = "transparent";
+            boton.setAttribute("aria-expanded", false);
+          } else {
+            navegacion.style.display = "none";
+            navegacion.style.flexDirection = "column";
+            navegacion.style.position = "absolute";
+            navegacion.style.top = "80px";
+            navegacion.style.right = "0";
+            navegacion.style.width = "320px";
+            navegacion.style.backgroundColor = "#3E2723";
+          }
+        }
+        boton.onclick = function () {
+          if (navegacion.style.display === "block") {
+            navegacion.style.display = "none";
+            boton.setAttribute("aria-expanded", false);
+          } else {
+            navegacion.style.display = "block";
+            boton.setAttribute("aria-expanded", true);
+          }
+        };
+        ajustarNavegacion();
+        window.addEventListener("resize", ajustarNavegacion);
+      };
+      </script>
 </head>
 <body>
-    <header>
+    <a href="#contenido" class="salto-contenido">Saltar al contenido principal</a>
+    <header role="banner">
         <nav>
-          <div>Impresión 3D</div>
-          <input type="checkbox" id="menu-toggle">
-          <label for="menu-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
-          </label>
-          <ul>
-            <a href="../../index.html"><li>Inicio</li></a>
-            <a href="../../tecnologias-de-impresion/tecnologias.html"><li>Tecnologías Impresión 3D</li></a>
-            <a href="../../aplicaciones-impresion/aplicaciones.html"><li>Aplicaciones de la Impresión 3D</li></a>
-            <a href="../../enlaces/enlaces.html"><li>Enlaces de interes</li></a>
-          </ul>
+            <div><h1>Impresión 3D</h1><div></div><img src="../../imagenes/impresora-3d.png" alt="logo"></div>
+            <button id="boton">
+              <span aria-live=""></span>
+              <span></span>
+              <span></span>
+            </button>
+            <ol>
+              <li><a href="../../index.html">Inicio</a></li>
+              <li><a href="../../tecnologias-de-impresion/tecnologias.html">Tecnologías</a></li>
+              <li><a href="../../aplicaciones-impresion/aplicaciones.html">Aplicaciones</a></li>
+              <li><a href="../materiales-impresion/materiales.html">Materiales</a></li>
+              <li><a href="../../enlaces/enlaces.html">Enlaces</a></li>
+            </ol>
         </nav>
     </header>
-    <main>
+    <main id="contenido">
         <div>
             <p><a href="../../index.html">Inicio</a> > <a href="../materiales.html">Materiales de Impresión 3D</a> > Otros Materiales</p>
         </div>

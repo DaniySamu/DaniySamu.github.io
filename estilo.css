@@ -16,30 +16,30 @@ header>nav {
   justify-content: space-between;
   align-items: center;
   background-color: #3E2723  ;
-  padding: 10px 20px;
+  padding: 0px 20px;
 }
 
 header>nav>div:first-of-type {
-  color: #FFCC80  ;
+  color: #FFCC80 ;
   font-size: 1.5rem;
   font-weight: bold;
 }
 
-header>nav>ul {
+header>nav>ol {
   list-style: none;
   display: flex;
   margin: 0;
   padding: 0;
 }
 
-header>nav>ul>li {
+header>nav>ol>li>a{
   margin-left: 20px;
   text-align: center;
   color: #FFCC80;
   font-size: 1rem;
 }
 
-header>nav>ul>a {
+header>nav>ol>li>a {
   color: #FFCC80 ;
   text-decoration: none;
   font-size: 1rem;
@@ -50,29 +50,26 @@ header>nav>ul>li>a:hover {
   color: #FFA000;
 }
 
-header>nav>input[type="checkbox"] {
-  display: none;
-}
-
-header>nav>label {
+header>nav>button {
   display: none;
   flex-direction: column;
   cursor: pointer;
+  background-color:#3E2723;
 }
 
-header>nav>label>span {
+header>nav>button>span {
   width: 25px;
   height: 3px;
-  background-color: #FFCC80;
+  background-color: white;
   margin: 4px 0;
   transition: 0.4s;
 }
 main>div{
-  margin-top: 80px;
+  margin-top: 140px;
 }
 
-@media (max-width: 780px) {
-  header>nav>ul {
+@media (max-width: 920px) {
+  header>nav>ol {
     display: none;
     flex-direction: column;
     width: 320px;
@@ -85,16 +82,16 @@ main>div{
     box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.2);
   }
 
-  header>nav>ul>li {
+  header>nav>ol>li {
     margin: 10px 0;
     text-align: center; 
   }
 
-  header>nav>label {
+  header>nav>button {
     display: flex;
   }
 
-  header>nav>input[type="checkbox"]:checked ~ ul {
+  header>nav>button:active {
     display: flex;
   }
   }
@@ -124,16 +121,16 @@ main>div{
       color: #FFA000;
   }
   p{
-      text-align: left;
+      text-align:left;
   }
   div:nth-of-type(1)>p{
       margin-left: 20px;
   }
   div:nth-of-type(1)>p>a{
-      color: black;
+      color: #912606;
   }
   div:nth-of-type(1)>p>a:hover{
-      color: black;
+      color: #4e1301;
   }
   main>div:nth-of-type(1)>p{
       text-align: center;
@@ -159,10 +156,32 @@ main>div{
     width: 48px;
     border-radius: 50%;
   }
-  nav>div>div>img{
+  header>nav>div:first-of-type>img{
     position: absolute;
-    top: 17px;
-    left: 216px;
+    top: 36px;
+    left: 302px;
     height: 32px;
     width: 32px;
   } 
+  .salto-contenido {
+    position: absolute;
+    left: -999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    z-index: 100;
+    background-color: #FFCC80;
+    color: #3E2723;
+    padding: 8px 12px;
+    font-weight: bold;
+    border-radius: 4px;
+  }
+  
+  .salto-contenido:focus {
+    left: 10px;
+    top: 10px;
+    width: auto;
+    height: auto;
+    overflow: visible;
+  }

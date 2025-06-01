@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Impresión 3D</title>
-    <link rel="stylesheet" href="estilo.css">
-    <link rel="icon" href="./imagenes/icon.png">
-    <link rel="canonical" href="https://daniysamu.github.io">
-    <meta name="keywords" content="impresion 3d">
-    <meta name="description" content="En esta página web hablaremos sobre la impresión 3D, también explicaremos que es y cómo funciona la impresión 3D, además de enseñar los diferentes tipos de impresión que existen.">
-    <meta name="googlebot" content="index, follow">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap" rel="stylesheet">
-    <script type="application/ld+json">
+  <link rel="stylesheet" href="estilo.css">
+  <link rel="icon" href="./imagenes/icon.png">
+  <link rel="canonical" href="https://daniysamu.github.io">
+  <meta name="keywords" content="impresion 3d">
+  <meta name="description"
+    content="En esta página web hablaremos sobre la impresión 3D, también explicaremos que es y cómo funciona la impresión 3D, además de enseñar los diferentes tipos de impresión que existen.">
+  <meta name="googlebot" content="index, follow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
       [
         {
           "@context": "http://schema.org",
@@ -47,37 +49,82 @@
         }
       ]
       </script>
+  <script>
+    window.onload = function () {
+    const boton = document.getElementById("boton");
+    const navegacion = document.querySelector("header nav ol");
+    function ajustarNavegacion() {
+      if (window.innerWidth > 920) {
+        navegacion.style.display = "flex";
+        navegacion.style.flexDirection = "row";
+        navegacion.style.justifyContent = "right";
+        navegacion.style.position = "static";
+        navegacion.style.width = "60%";
+        navegacion.style.backgroundColor = "transparent";
+        boton.setAttribute("aria-expanded", false);
+      } else {
+        navegacion.style.display = "none";
+        navegacion.style.flexDirection = "column";
+        navegacion.style.position = "absolute";
+        navegacion.style.top = "80px";
+        navegacion.style.right = "0";
+        navegacion.style.width = "320px";
+        navegacion.style.backgroundColor = "#3E2723";
+      }
+    }
+    boton.onclick = function () {
+      if (navegacion.style.display === "block") {
+        navegacion.style.display = "none";
+        boton.setAttribute("aria-expanded", false);
+      } else {
+        navegacion.style.display = "block";
+        boton.setAttribute("aria-expanded", true);
+      }
+    };
+    ajustarNavegacion();
+    window.addEventListener("resize", ajustarNavegacion);
+  };
+  </script>
 </head>
 <body>
-  <header>
+  <a href="#contenido" class="salto-contenido">Saltar al contenido principal</a>
+  <header role="banner">
     <nav>
-      <div>Impresión 3D <div><img src="./imagenes/impresora-3d.png" alt=""></div></div>
-      <input type="checkbox" id="menu-toggle">
-      <label for="menu-toggle">
+      <div>
+        <h1>Impresión 3D</h1>
+        <div></div><img src="imagenes/impresora-3d.png" alt="logo">
+      </div>
+      <button id="boton">
+        <span aria-live=""></span>
         <span></span>
         <span></span>
-        <span></span>
-      </label>
-      <ul>
+      </button>
+      <ol>
         <li><a href="./index.html">Inicio</a></li>
         <li><a href="./tecnologias-de-impresion/tecnologias.html">Tecnologías</a></li>
-        <li><a href="./tipos-de-impresion/tipos.html">Tipos</a></li>
+        <li><a href="./aplicaciones-impresion/aplicaciones.html">Aplicaciones</a></li>
         <li><a href="./materiales-impresion/materiales.html">Materiales</a></li>
         <li><a href="./enlaces/enlaces.html">Enlaces</a></li>
-      </ul>
+      </ol>
     </nav>
   </header>
-  <main>
+  <main id="contenido">
     <div>
       <p>Inicio</p>
     </div>
     <section>
       <h2>Impresión 3D: La Revolución de la Fabricación Digital</h2>
-      <p>La impresión 3D, también conocida como fabricación aditiva, es una tecnología que permite crear objetos tridimensionales a partir de un archivo digital. A diferencia de los métodos tradicionales de fabricación, que suelen eliminar material (como en el fresado o el torneado), la impresión 3D construye capa por capa, lo que permite una mayor libertad de diseño y una reducción en el desperdicio de materiales.</p>
+      <p>La impresión 3D, también conocida como fabricación aditiva, es una tecnología que permite crear objetos
+        tridimensionales a partir de un archivo digital. A diferencia de los métodos tradicionales de fabricación, que
+        suelen eliminar material (como en el fresado o el torneado), la impresión 3D construye capa por capa, lo que
+        permite una mayor libertad de diseño y una reducción en el desperdicio de materiales.</p>
     </section>
     <section>
-        <h2>¿Cómo Funciona la Impresión 3D?</h2>
-        <p>El proceso de impresión 3D comienza con un diseño digital creado en software de modelado 3D (como AutoCAD, Blender o Tinkercad). Este diseño se divide en capas mediante un software especializado, que luego envía las instrucciones a la impresora 3D. La impresora deposita material capa por capa hasta que el objeto está completo.</p>
+      <h2>¿Cómo Funciona la Impresión 3D?</h2>
+      <p>El proceso de impresión 3D comienza con un diseño digital creado en software de modelado 3D (como AutoCAD,
+        Blender o Tinkercad). Este diseño se divide en capas mediante un software especializado, que luego envía las
+        instrucciones a la impresora 3D. La impresora deposita material capa por capa hasta que el objeto está completo.
+      </p>
     </section>
     <section>
       <h2>Ventajas de la Impresión 3D</h2>
@@ -99,11 +146,14 @@
     </section>
     <section>
       <h2>El Futuro de la Impresión 3D</h2>
-      <p>La impresión 3D continúa evolucionando, con avances en materiales biocompatibles, impresión 4D (objetos que cambian con el tiempo) y aplicaciones en la exploración espacial. Esta tecnología promete revolucionar aún más la forma en que diseñamos, fabricamos y consumimos productos.</p>
+      <p>La impresión 3D continúa evolucionando, con avances en materiales biocompatibles, impresión 4D (objetos que
+        cambian con el tiempo) y aplicaciones en la exploración espacial. Esta tecnología promete revolucionar aún más
+        la forma en que diseñamos, fabricamos y consumimos productos.</p>
     </section>
   </main>
   <footer>
-    &copy; Daniel Sienes 2025 | <a href="./contactanos/contactanos.html">Contactanos</a>
+    &copy; Daniel Sienes 2025 | <a href="./contactanos/contactanos.html">Contáctanos</a>
   </footer>
 </body>
+
 </html>
