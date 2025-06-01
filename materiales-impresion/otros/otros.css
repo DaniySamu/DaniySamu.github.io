@@ -65,6 +65,7 @@ header>nav>button>span {
   background-color: white;
   margin: 4px 0;
   transition: 0.4s;
+  color: transparent;
 }
 
 main>div {

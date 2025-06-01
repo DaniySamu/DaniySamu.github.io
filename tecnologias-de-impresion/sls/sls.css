@@ -63,6 +63,7 @@ body {
     background-color: white;
     margin: 4px 0;
     transition: 0.4s;
+    color: transparent;
   }
   main>div{
     margin-top: 130px;

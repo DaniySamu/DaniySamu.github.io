@@ -56,7 +56,7 @@
                 <div></div><img src="../imagenes/impresora-3d.png" alt="">
             </div>
             <button id="boton">
-                <span aria-live=""></span>
+                <span aria-live="">0</span>
                 <span></span>
                 <span></span>
             </button>
@@ -81,9 +81,13 @@
         <section>
             <h3>Envíanos un Mensaje</h3>
             <form action="#" method="post">
+                <label for="nombre">Nombre:</label>
                 <input type="text" name="nombre" placeholder="Nombre" required>
+                <label for="email">Email:</label>
                 <input type="email" name="email" placeholder="Correo Electrónico" required>
+                <label for="asunto">Asunto:</label>
                 <input type="text" name="asunto" placeholder="Asunto" required>
+                <label for="mensaje">Mensaje:</label>
                 <textarea name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
                 <button type="submit">Enviar Mensaje</button>
             </form>
