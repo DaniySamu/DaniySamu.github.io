@@ -65,8 +65,8 @@ body {
     transition: 0.4s;
     color: transparent;
   }
-  main>div{
-    margin-top: 140px;
+  main{
+    margin-top: 120px;
   }
   footer{
     position: relative;
@@ -109,6 +109,9 @@ body {
       text-align: center;
       width: 96%;
       margin-left: 20px;
+  }
+  main>h2{
+    padding-left: 15px;
   }
   section>ul>li{
       font-weight: bold;
