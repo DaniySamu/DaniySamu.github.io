@@ -18,7 +18,13 @@ header>nav {
   background-color: #3E2723  ;
   padding: 0px 20px;
 }
-
+ header>nav>div:first-of-type>div>img{
+      position: absolute;
+      top: 36px;
+      left: 0px;
+      height: 32px;
+      width: 32px;
+    }
 header>nav>div:first-of-type {
   color: #FFCC80 ;
   font-size: 1.5rem;
@@ -210,4 +216,5 @@ header>nav>div:first-of-type>img{
       width: 32px;
     } 
   }
+
   
